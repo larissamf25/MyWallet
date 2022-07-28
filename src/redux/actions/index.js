@@ -23,3 +23,19 @@ export function fetchCurrencies() {
     dispatch(getCurrenciesSucess(siglas));
   };
 }
+
+export const SAVE_EXPENSES = 'SAVE_EXPENSES';
+
+export const saveExpensesSucess = (expense) => ({
+  type: SAVE_EXPENSES,
+  expense,
+});
+
+export function saveExpenses(expense) {
+  return async (dispatch) => {
+    const response = await fetchAPI();
+    delete response.USDT;
+    expense.exchangeRates = response;
+    dispatch(saveExpensesSucess(expense));
+  };
+}
