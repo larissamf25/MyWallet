@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route path="/"><Login /></Route>
+        <Route path="/" exact><Login /></Route>
         <Route path="/carteira"><Wallet /></Route>
       </Switch>
     </div>
