@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { deleteItem, editItem } from '../redux/actions';
 
 class Table extends Component {
-  handleEdit = () => {
-
-  }
-
-  handleDelete = () => {
-
-  }
-
   render() {
-    const { wallet } = this.props;
-    const { expenses } = wallet;
+    const { wallet, deleteItemFunc, editItemFunc } = this.props;
+    const { expenses, editor, idToEdit } = wallet;
+    let realExpenses = expenses;
+    if (editor) realExpenses = expenses.filter((expense) => expense.id !== idToEdit);
     return (
       <div>
         <table>
@@ -32,13 +27,16 @@ class Table extends Component {
           </thead>
           <tbody>
             {
-              expenses.map((expense) => {
-                const { description, payment, value, currency, exchangeRates } = expense;
-                const cambio = exchangeRates[currency].ask;
+              realExpenses.map((expense) => {
+                const { id, description, tag, payment,
+                  value, currency, exchangeRates } = expense;
+                const cambio = parseFloat(exchangeRates[currency].ask);
+                console.log(typeof value);
+                console.log(typeof cambio);
                 const ligne = (
                   <tr>
                     <td>{ description }</td>
-                    <td>{ expense.tag }</td>
+                    <td>{ tag }</td>
                     <td>{ payment }</td>
                     <td>{ value.toFixed(2) }</td>
                     <td>{ exchangeRates[currency].name }</td>
@@ -46,8 +44,20 @@ class Table extends Component {
                     <td>{ Math.round(value * cambio * 100) / 100 }</td>
                     <td>Real</td>
                     <td>
-                      <button type="button">Editar</button>
-                      <button type="button">Excluir</button>
+                      <button
+                        type="button"
+                        data-testid="edit-btn"
+                        onClick={ () => editItemFunc(id) }
+                      >
+                        Editar despesa
+                      </button>
+                      <button
+                        type="button"
+                        data-testid="delete-btn"
+                        onClick={ () => deleteItemFunc(id) }
+                      >
+                        Deletar
+                      </button>
                     </td>
                   </tr>
                 );
@@ -63,10 +73,17 @@ class Table extends Component {
 
 Table.propTypes = {
   wallet: propTypes.objectOf(propTypes.array).isRequired,
+  deleteItemFunc: propTypes.func.isRequired,
+  editItemFunc: propTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   wallet: state.wallet,
 });
 
-export default connect(mapStateToProps)(Table);
+const mapDispatchToProps = (dispatch) => ({
+  deleteItemFunc: (value) => dispatch(deleteItem(value)),
+  editItemFunc: (value) => dispatch(editItem(value)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Table);

@@ -39,3 +39,27 @@ export function saveExpenses(expense) {
     dispatch(saveExpensesSucess(expense));
   };
 }
+
+export const DELETE_ITEM = 'DELETE_ITEM';
+
+export const deleteItem = (id) => ({
+  type: DELETE_ITEM,
+  id,
+});
+
+export const EDIT_ITEM = 'EDIT_ITEM';
+
+export const editItem = (id) => ({
+  type: EDIT_ITEM,
+  id,
+});
+
+export const UPDATE_ITEM = 'UPDATE_ITEM';
+
+export const updateItem = (expense) => {
+  console.log(expense);
+  return {
+    type: UPDATE_ITEM,
+    expense,
+  };
+};

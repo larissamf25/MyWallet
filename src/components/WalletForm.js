@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchCurrencies, saveExpenses } from '../redux/actions';
+import { fetchCurrencies, saveExpenses, updateItem } from '../redux/actions';
 
 class WalletForm extends Component {
   constructor() {
@@ -27,17 +27,31 @@ class WalletForm extends Component {
 
   handleSave = () => {
     const { value, description, currency, payment, tag } = this.state;
-    const { wallet } = this.props;
-    const id = wallet.expenses.length;
-    const { saveExpensesFunc } = this.props;
-    saveExpensesFunc({
-      id,
-      value: parseFloat(value),
-      description,
-      currency,
-      payment,
-      tag,
-    });
+    const { wallet, updateItemFunc } = this.props;
+    const { editor, idToEdit } = wallet;
+    if (editor) {
+      updateItemFunc({
+        id: idToEdit,
+        value: parseFloat(value),
+        description,
+        currency,
+        payment,
+        tag,
+      });
+    } else {
+      const id = (wallet.expenses.length === 0)
+        ? 0
+        : wallet.expenses[wallet.expenses.length - 1].id + 1;
+      const { saveExpensesFunc } = this.props;
+      saveExpensesFunc({
+        id,
+        value: parseFloat(value),
+        description,
+        currency,
+        payment,
+        tag,
+      });
+    }
     this.setState({
       value: '',
       description: '',
@@ -46,8 +60,10 @@ class WalletForm extends Component {
 
   render() {
     const { wallet } = this.props;
-    const { currencies } = wallet;
+    const { currencies, editor } = wallet;
     const { value, description } = this.state;
+    const btnAddTitle = 'Adicionar despesa';
+    const btnEditTitle = 'Editar despesa';
     return (
       <div>
         <form>
@@ -112,7 +128,12 @@ class WalletForm extends Component {
               <option>Saúde</option>
             </select>
           </label>
-          <button type="button" onClick={ this.handleSave }>Adicionar despesa</button>
+          <button
+            type="button"
+            onClick={ this.handleSave }
+          >
+            { editor ? btnEditTitle : btnAddTitle }
+          </button>
         </form>
       </div>
     );
@@ -123,11 +144,13 @@ WalletForm.propTypes = {
   getCurrencies: propTypes.func.isRequired,
   wallet: propTypes.objectOf(propTypes.array).isRequired,
   saveExpensesFunc: propTypes.func.isRequired,
+  updateItemFunc: propTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({
   getCurrencies: () => dispatch(fetchCurrencies()),
   saveExpensesFunc: (value) => dispatch(saveExpenses(value)),
+  updateItemFunc: (value) => dispatch(updateItem(value)),
 });
 
 const mapStateToProps = (state) => ({
