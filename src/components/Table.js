@@ -28,20 +28,18 @@ class Table extends Component {
           <tbody>
             {
               realExpenses.map((expense) => {
-                const { id, description, tag, payment,
+                const { id, description, tag, method,
                   value, currency, exchangeRates } = expense;
                 const cambio = parseFloat(exchangeRates[currency].ask);
-                console.log(typeof value);
-                console.log(typeof cambio);
                 const ligne = (
-                  <tr>
+                  <tr key={ id }>
                     <td>{ description }</td>
                     <td>{ tag }</td>
-                    <td>{ payment }</td>
-                    <td>{ value.toFixed(2) }</td>
+                    <td>{ method }</td>
+                    <td>{ parseFloat(value).toFixed(2) }</td>
                     <td>{ exchangeRates[currency].name }</td>
                     <td>{ Math.round(cambio * 100) / 100 }</td>
-                    <td>{ Math.round(value * cambio * 100) / 100 }</td>
+                    <td>{ Math.round(parseFloat(value) * cambio * 100) / 100 }</td>
                     <td>Real</td>
                     <td>
                       <button

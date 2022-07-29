@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2022-07-29T22:45:36.456Z",
+    "end": "2022-07-29T22:45:39.530Z",
+    "duration": 3074,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6875858f-12f9-4157-895c-0d0a3c5bc8dd",
+      "title": "",
+      "fullFile": "cypress/integration/10.TestCoverage_spec.js",
+      "file": "cypress/integration/10.TestCoverage_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39b476d3-2c48-4002-a30b-fd9e1bc55fa3",
+          "title": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cobertura de \"Statements\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Statements\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 731,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.statements.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_37_173Z-debug.log\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_37_173Z-debug.log\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:44407/__cypress/runner/cypress_runner.js:167117:78\n    at tryCatcher (http://localhost:44407/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44407/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:44407/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:44407/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:44407/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:44407/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:44407/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44407/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:44407/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:44407/__cypress/tests?p=cypress/integration/10.TestCoverage_spec.js:103:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  npm ERR! code ELIFECYCLE\n  npm ERR! errno 1\n  npm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\n  npm ERR! Exit status 1\n  npm ERR! \n  npm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\n  npm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n  \n  npm ERR! A complete log of this run can be found in:\n  npm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_37_173Z-debug.log\n  \n      at ChildProcess.exithandler (child_process.js:383:12)\n      at ChildProcess.emit (events.js:400:28)\n      at maybeClose (internal/child_process.js:1058:16)\n      at Process.ChildProcess._handle.onexit (internal/child_process.js:293:5)",
+                "diff": null
+              },
+              "uuid": "992c1dff-53ce-4a2e-b2ef-49b125fda509",
+              "parentUUID": "39b476d3-2c48-4002-a30b-fd9e1bc55fa3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Functions\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Functions\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 758,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.functions.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_37_995Z-debug.log\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_37_995Z-debug.log\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:44407/__cypress/runner/cypress_runner.js:167117:78\n    at tryCatcher (http://localhost:44407/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44407/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:44407/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:44407/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:44407/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:44407/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:44407/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44407/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:44407/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:44407/__cypress/tests?p=cypress/integration/10.TestCoverage_spec.js:108:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  npm ERR! code ELIFECYCLE\n  npm ERR! errno 1\n  npm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\n  npm ERR! Exit status 1\n  npm ERR! \n  npm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\n  npm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n  \n  npm ERR! A complete log of this run can be found in:\n  npm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_37_995Z-debug.log\n  \n      at ChildProcess.exithandler (child_process.js:383:12)\n      at ChildProcess.emit (events.js:400:28)\n      at maybeClose (internal/child_process.js:1058:16)\n      at Socket.<anonymous> (internal/child_process.js:443:11)\n      at Socket.emit (events.js:400:28)\n      at Pipe.<anonymous> (net.js:686:12)",
+                "diff": null
+              },
+              "uuid": "9e7bca0c-c008-448c-8afe-7b4ff33de87b",
+              "parentUUID": "39b476d3-2c48-4002-a30b-fd9e1bc55fa3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Branches\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Branches\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 757,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.branches.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_38_766Z-debug.log\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_38_766Z-debug.log\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:44407/__cypress/runner/cypress_runner.js:167117:78\n    at tryCatcher (http://localhost:44407/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44407/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:44407/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:44407/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:44407/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:44407/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:44407/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44407/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:44407/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:44407/__cypress/tests?p=cypress/integration/10.TestCoverage_spec.js:113:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  npm ERR! code ELIFECYCLE\n  npm ERR! errno 1\n  npm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\n  npm ERR! Exit status 1\n  npm ERR! \n  npm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\n  npm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n  \n  npm ERR! A complete log of this run can be found in:\n  npm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_38_766Z-debug.log\n  \n      at ChildProcess.exithandler (child_process.js:383:12)\n      at ChildProcess.emit (events.js:400:28)\n      at maybeClose (internal/child_process.js:1058:16)\n      at Process.ChildProcess._handle.onexit (internal/child_process.js:293:5)",
+                "diff": null
+              },
+              "uuid": "eb0e7d72-ba35-44d3-bf3b-4dbdfa453196",
+              "parentUUID": "39b476d3-2c48-4002-a30b-fd9e1bc55fa3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Lines\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Lines\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 728,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.lines.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_39_503Z-debug.log\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_39_503Z-debug.log\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:44407/__cypress/runner/cypress_runner.js:167117:78\n    at tryCatcher (http://localhost:44407/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44407/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:44407/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:44407/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:44407/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:44407/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:44407/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44407/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:44407/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:44407/__cypress/tests?p=cypress/integration/10.TestCoverage_spec.js:118:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  npm ERR! code ELIFECYCLE\n  npm ERR! errno 1\n  npm ERR! sd-0x-project-trybewallet@0.1.0 test-coverage: `react-scripts test --coverage --watchAll=false \"--coverageReporters=json-summary\" \"--testFailureExitCode=0\"`\n  npm ERR! Exit status 1\n  npm ERR! \n  npm ERR! Failed at the sd-0x-project-trybewallet@0.1.0 test-coverage script.\n  npm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n  \n  npm ERR! A complete log of this run can be found in:\n  npm ERR!     /home/larissa/.npm/_logs/2022-07-29T22_45_39_503Z-debug.log\n  \n      at ChildProcess.exithandler (child_process.js:383:12)\n      at ChildProcess.emit (events.js:400:28)\n      at maybeClose (internal/child_process.js:1058:16)\n      at Process.ChildProcess._handle.onexit (internal/child_process.js:293:5)",
+                "diff": null
+              },
+              "uuid": "e62534e8-9ed6-4d9e-b45d-45787fb702b8",
+              "parentUUID": "39b476d3-2c48-4002-a30b-fd9e1bc55fa3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "992c1dff-53ce-4a2e-b2ef-49b125fda509",
+            "9e7bca0c-c008-448c-8afe-7b4ff33de87b",
+            "eb0e7d72-ba35-44d3-bf3b-4dbdfa453196",
+            "e62534e8-9ed6-4d9e-b45d-45787fb702b8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

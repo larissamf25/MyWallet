@@ -12,7 +12,7 @@ class Header extends Component {
         <p data-testid="total-field">
           { expenses.reduce((acc, expense) => {
             const { value, currency, exchangeRates } = expense;
-            return acc + value * exchangeRates[currency].ask;
+            return acc + parseFloat(value) * parseFloat(exchangeRates[currency].ask);
           }, 0).toFixed(2) }
         </p>
         <p data-testid="header-currency-field">BRL</p>

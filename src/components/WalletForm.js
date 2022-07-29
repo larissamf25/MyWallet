@@ -10,7 +10,7 @@ class WalletForm extends Component {
       value: '',
       description: '',
       currency: 'USD',
-      payment: 'Dinheiro',
+      method: 'Dinheiro',
       tag: 'Alimentação',
     };
   }
@@ -26,16 +26,16 @@ class WalletForm extends Component {
   }
 
   handleSave = () => {
-    const { value, description, currency, payment, tag } = this.state;
+    const { value, description, currency, method, tag } = this.state;
     const { wallet, updateItemFunc } = this.props;
     const { editor, idToEdit } = wallet;
     if (editor) {
       updateItemFunc({
         id: idToEdit,
-        value: parseFloat(value),
+        value: value.toString(),
         description,
         currency,
-        payment,
+        method,
         tag,
       });
     } else {
@@ -45,10 +45,10 @@ class WalletForm extends Component {
       const { saveExpensesFunc } = this.props;
       saveExpensesFunc({
         id,
-        value: parseFloat(value),
+        value: value.toString(),
         description,
         currency,
-        payment,
+        method,
         tag,
       });
     }
@@ -100,11 +100,11 @@ class WalletForm extends Component {
               )) }
             </select>
           </label>
-          <label htmlFor="payment">
-            Payment:
+          <label htmlFor="method">
+            Method:
             <select
-              id="payment"
-              name="payment"
+              id="method"
+              name="method"
               data-testid="method-input"
               onChange={ this.handleChange }
             >
