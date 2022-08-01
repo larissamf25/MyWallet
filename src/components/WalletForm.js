@@ -62,14 +62,15 @@ class WalletForm extends Component {
     const { wallet } = this.props;
     const { currencies, editor } = wallet;
     const { value, description } = this.state;
-    const btnAddTitle = 'Adicionar despesa';
-    const btnEditTitle = 'Editar despesa';
+    const btnAddTitle = 'Add';
+    const btnEditTitle = 'Edit';
     return (
       <div>
-        <form>
+        <form className="wallet-form">
           <label htmlFor="value">
             Value:
             <input
+              className="value"
               id="value"
               name="value"
               value={ value }
@@ -108,9 +109,9 @@ class WalletForm extends Component {
               data-testid="method-input"
               onChange={ this.handleChange }
             >
-              <option>Dinheiro</option>
-              <option>Cartão de crédito</option>
-              <option>Cartão de débito</option>
+              <option>Cash</option>
+              <option>Credit Card</option>
+              <option>Debit Card</option>
             </select>
           </label>
           <label htmlFor="tag">
@@ -121,11 +122,11 @@ class WalletForm extends Component {
               data-testid="tag-input"
               onChange={ this.handleChange }
             >
-              <option>Alimentação</option>
-              <option>Lazer</option>
-              <option>Trabalho</option>
-              <option>Transporte</option>
-              <option>Saúde</option>
+              <option>Food</option>
+              <option>Spare time</option>
+              <option>Work</option>
+              <option>Transport</option>
+              <option>Health</option>
             </select>
           </label>
           <button

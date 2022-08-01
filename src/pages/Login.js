@@ -2,7 +2,9 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { FaWallet } from 'react-icons/fa';
 import { saveLogin } from '../redux/actions';
+import '../css/login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -43,7 +45,9 @@ class Login extends React.Component {
     if (redirect) return <Redirect to="/carteira" />;
     return (
       <div>
-        <form>
+        <form className="login-form">
+          <FaWallet className="icon" />
+          <h1>my wallet</h1>
           <input
             data-testid="email-input"
             placeholder="email"
@@ -64,6 +68,7 @@ class Login extends React.Component {
           >
             Entrar
           </button>
+          <a href="www.google.com">forgot the password</a>
         </form>
       </div>
     );

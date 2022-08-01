@@ -1,0 +1,42 @@
+.login-form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 125px auto;
+  padding: 50px;
+  width: 200px;
+}
+
+.login-form h1 {
+  text-align: center;
+}
+
+.login-form .icon {
+  color: rgb(7, 7, 75);
+  font-size: 1.7em;
+  margin: auto;
+}
+
+.login-form input {
+  margin: 10px auto;
+  width: 150px;
+}
+
+.login-form button {
+  border: rgb(7, 7, 75) 2px solid;
+  border-radius: 6px;
+  color: rgb(7, 7, 75);
+  margin: 10px auto;
+  width: 100px;
+}
+
+.login-form button:hover {
+  background-color: rgb(7, 7, 75);
+  color: white;
+}
+
+.login-form a {
+  font-size: 0.8em;
+  text-align: center;
+  text-decoration: none;
+}

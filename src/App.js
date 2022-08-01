@@ -2,14 +2,16 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Login from './pages/Login';
 import Wallet from './pages/Wallet';
+import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="login-page">
       <Switch>
         <Route path="/" exact><Login /></Route>
         <Route path="/carteira"><Wallet /></Route>
       </Switch>
+      <footer className="footer">by Larissa Menezes, 2022</footer>
     </div>
   );
 }

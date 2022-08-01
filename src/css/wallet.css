@@ -1,0 +1,114 @@
+.header {
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 40px;
+  padding: 10px;
+}
+
+.header .email {
+  margin: 10px;
+}
+
+.total-container {
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  color: rgb(7, 7, 75);
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  margin-right: 20px;
+  padding: 0 5px;
+  position: fixed;
+  right: 0;
+  width: 80px;
+}
+
+hr {
+  color: white;
+  margin: 0 20px;
+}
+
+.wallet-form {
+  background-color: white;
+  border-radius: 10px;
+  /* box-shadow: 0 0 red 20px; */
+  color: black;
+  margin: 20px 100px;
+  padding: 20px 30px;
+}
+
+.wallet-form label {
+  margin: 8px 15px;
+}
+
+.wallet-form .value {
+  width: 50px;
+}
+
+.wallet-form button {
+  border: rgb(7, 7, 75) 2px solid;
+  border-radius: 6px;
+  color: rgb(7, 7, 75);
+  margin: 8px;
+  width: 50px;
+}
+
+.wallet-form button:hover {
+  background-color: rgb(7, 7, 75);
+  color: white;
+}
+
+.table {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  border-spacing: 0;
+  margin: 50px auto;
+  width: 92%;
+}
+
+.table .table-header th {
+  height: 30px;
+}
+
+.table .table-body tr {
+  border: none;
+  height: 50px;
+  text-align: center;
+}
+
+.table .table-body tr:nth-child( odd ) {
+  background-color: rgb(171, 193, 240);
+}
+
+.table .table-body tr:nth-child( even ) {
+  background-color: white;
+}
+
+.table .table-body tr:hover:nth-child( odd ) {
+  color: white;
+}
+
+.table .table-body tr:hover:nth-child( even ) {
+  color: rgb(171, 193, 240);
+}
+
+.table .table-body td {
+  text-align: center;
+}
+
+.table .table-body td button {
+  border: none;
+  color: rgb(7, 7, 75);
+  font-size: 1.2em;
+  margin: 3px;
+}
+
+.table .table-body tr:nth-child( odd ) button {
+  background-color: rgb(171, 193, 240);
+}
+
+.table .table-body tr:nth-child( even ) button {
+  background-color: white;
+}
