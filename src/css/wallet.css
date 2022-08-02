@@ -10,11 +10,24 @@
   margin: 10px;
 }
 
+.header .icon {
+  color: rgb(27, 184, 27);
+}
+
+.header .title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  width: 1284px;
+}
+
 .total-container {
   align-items: center;
   background-color: white;
   border-radius: 6px;
-  color: rgb(7, 7, 75);
+  color: rgb(27, 184, 27);
   display: flex;
   height: 30px;
   justify-content: space-between;
@@ -33,8 +46,7 @@ hr {
 .wallet-form {
   background-color: white;
   border-radius: 10px;
-  /* box-shadow: 0 0 red 20px; */
-  color: black;
+  box-shadow: 0 0 20px black;
   margin: 20px 100px;
   padding: 20px 30px;
 }
@@ -47,51 +59,60 @@ hr {
   width: 50px;
 }
 
+.wallet-form input , .wallet-form select {
+  margin: 3px;
+}
+
 .wallet-form button {
-  border: rgb(7, 7, 75) 2px solid;
+  background-color: rgb(7, 7, 75);
+  border: 1px solid rgb(7, 7, 75);
   border-radius: 6px;
-  color: rgb(7, 7, 75);
+  color: white;
   margin: 8px;
   width: 50px;
 }
 
 .wallet-form button:hover {
-  background-color: rgb(7, 7, 75);
+  background-color: rgb(27, 184, 27);
+  border: 1px solid rgb(27, 184, 27);
   color: white;
+}
+
+.table-title {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 500;
+  text-align: center;
 }
 
 .table {
   background-color: white;
   border-radius: 10px 10px 0 0;
   border-spacing: 0;
-  margin: 50px auto;
+  box-shadow: -5px 0 rgb(27, 184, 27);
+  margin: 30px auto;
+  padding: 0 5px;
   width: 92%;
 }
 
 .table .table-header th {
-  height: 30px;
+  box-shadow: inset 0 -3px rgb(27, 184, 27);
+  height: 40px;
+}
+
+.table .table-body {
+  overflow-y: scroll;
 }
 
 .table .table-body tr {
+  background-color: white;
   border: none;
   height: 50px;
   text-align: center;
 }
 
-.table .table-body tr:nth-child( odd ) {
-  background-color: rgb(171, 193, 240);
-}
-
-.table .table-body tr:nth-child( even ) {
-  background-color: white;
-}
-
-.table .table-body tr:hover:nth-child( odd ) {
-  color: white;
-}
-
-.table .table-body tr:hover:nth-child( even ) {
-  color: rgb(171, 193, 240);
+.table .table-body tr:hover {
+  color: rgb(27, 184, 27);
 }
 
 .table .table-body td {
@@ -99,16 +120,27 @@ hr {
 }
 
 .table .table-body td button {
+  background-color: white;
   border: none;
   color: rgb(7, 7, 75);
   font-size: 1.2em;
   margin: 3px;
 }
 
-.table .table-body tr:nth-child( odd ) button {
-  background-color: rgb(171, 193, 240);
+.table .table-body td button:hover {
+  color: rgb(27, 184, 27);
 }
 
-.table .table-body tr:nth-child( even ) button {
+.sort-btn {
   background-color: white;
+  border: 2px solid rgb(27, 184, 27);
+  border-radius: 6px;
+  color: rgb(7, 7, 75);
+  margin: 0 567px;
+  padding: 3px;
+  width: 150px;
+}
+
+.sort-btn:hover {
+  background-color: rgb(27, 184, 27);
 }

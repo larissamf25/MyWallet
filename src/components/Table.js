@@ -12,9 +12,7 @@ class Table extends Component {
   constructor() {
     super();
     this.state = {
-      methodFilter: '',
-      tagFilter: '',
-      currencyFilter: '',
+      rank: false,
     };
   }
 
@@ -25,18 +23,22 @@ class Table extends Component {
 
   render() {
     const { wallet, deleteItemFunc, editItemFunc } = this.props;
+    const { rank } = this.state;
     const { expenses, editor, idToEdit } = wallet;
     let realExpenses = expenses;
+    if (expenses.length > 0 && rank) {
+      realExpenses.sort((a, b) => (
+        a.exchangeRates[a.currency].ask * a.value - b.exchangeRates[b.currency].ask * b.value
+      ));
+    }
     if (editor) realExpenses = expenses.filter((expense) => expense.id !== idToEdit);
-    const { filter } = this.state;
-    if (filter === 'Tag') realExpenses.filter((expense) => expense.tag);
-    else if (filter === 'Currency') ;
-    else if (filter === 'Payment') ;
     return (
       <div>
+        <p className="table-title">Exchange's Table</p>
         <table className="table">
           <thead className="table-header">
             <tr>
+              <th>nº</th>
               <th>Description</th>
               <th>Tag</th>
               <th>Method</th>
@@ -50,12 +52,13 @@ class Table extends Component {
           </thead>
           <tbody className="table-body">
             {
-              realExpenses.map((expense) => {
+              realExpenses.map((expense, index) => {
                 const { id, description, tag, method,
                   value, currency, exchangeRates } = expense;
                 const cambio = parseFloat(exchangeRates[currency].ask);
                 const ligne = (
                   <tr key={ id }>
+                    <td>{ index + 1 }</td>
                     <td>{ description }</td>
                     <td>{ tag === 'Food' ? <BiRestaurant /> : tag === 'Health' ? <RiHealthBookFill /> : tag === 'Transport' ? <FaCarAlt /> : tag === 'Work' ? <MdWork /> : <FaUmbrellaBeach /> }</td>
                     <td>{ method }</td>
@@ -87,45 +90,13 @@ class Table extends Component {
             }
           </tbody>
         </table>
-        <button>Rank by value (BRL)</button>
-        <label htmlFor="filter">
-          Filter by Tag:
-          <select
-            id="filter"
-            name="tagFilter"
-            onChange={ this.handleFilter }
-          >
-            <option>Food</option>
-            <option>Spare time</option>
-            <option>Work</option>
-            <option>Transport</option>
-            <option>Health</option>
-          </select>
-        </label>
-        <label htmlFor="filter">
-          Filter by Method:
-          <select
-            id="filter"
-            name="methodFilter"
-            onChange={ this.handleFilter }
-          >
-            <option>Cash</option>
-            <option>Credit Card</option>
-            <option>Debit Card</option>
-          </select>
-        </label>
-        <label htmlFor="filter">
-          Filter by Currency:
-          <select
-            id="filter"
-            name="currencyFilter"
-            onChange={ this.handleFilter }
-          >
-            {/* <option>Cash</option>
-            <option>Credit Card</option>
-            <option>Debit Card</option> */}
-          </select>
-        </label>
+        <button
+          type="button"
+          className="sort-btn"
+          onClick={ () => { this.setState({ rank: true }) } }
+        >
+          Rank by value (BRL)
+        </button>
       </div>
     );
   }

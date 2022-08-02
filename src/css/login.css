@@ -1,5 +1,6 @@
 .login-form {
   background-color: white;
+  box-shadow: -5px 0 rgb(27, 184, 27);
   display: flex;
   flex-direction: column;
   margin: 125px auto;
@@ -8,6 +9,7 @@
 }
 
 .login-form h1 {
+  color: rgb(27, 184, 27);
   text-align: center;
 }
 
@@ -23,19 +25,22 @@
 }
 
 .login-form button {
-  border: rgb(7, 7, 75) 2px solid;
+  background-color: rgb(7, 7, 75);
+  border: 1px solid rgb(7, 7, 75);
   border-radius: 6px;
-  color: rgb(7, 7, 75);
+  color: white;
   margin: 10px auto;
   width: 100px;
 }
 
 .login-form button:hover {
-  background-color: rgb(7, 7, 75);
+  background-color: rgb(27, 184, 27);
+  border: 1px solid rgb(27, 184, 27);
   color: white;
 }
 
 .login-form a {
+  color: rgb(7, 7, 75);
   font-size: 0.8em;
   text-align: center;
   text-decoration: none;
