@@ -62,12 +62,11 @@ class Table extends Component {
                     <td>{ index + 1 }</td>
                     <td>{ description }</td>
                     <td>
-                      {
-                        tag === 'Food' ? <BiRestaurant /> : tag === 'Health' ? <RiHealthBookFill />
-                          : tag === 'Transport' ? <FaCarAlt />
-                            : tag === 'Work' ? <MdWork />
-                              : <FaUmbrellaBeach />
-                      }
+                      { tag === 'Food' && <BiRestaurant /> }
+                      { tag === 'Health' && <RiHealthBookFill /> }
+                      { tag === 'Transport' && <FaCarAlt /> }
+                      { tag === 'Work' && <MdWork /> }
+                      { tag === 'Spare time' && <FaUmbrellaBeach /> }
                     </td>
                     <td>{ method }</td>
                     <td>{ parseFloat(value).toFixed(2) }</td>
