@@ -42,7 +42,7 @@ class Login extends React.Component {
 
   render() {
     const { btnDisabled, redirect } = this.state;
-    if (redirect) return <Redirect to="/carteira" />;
+    if (redirect) return <Redirect to="/MyWallet/carteira" />;
     return (
       <div>
         <form className="login-form">
