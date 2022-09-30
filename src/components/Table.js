@@ -28,13 +28,14 @@ class Table extends Component {
     let realExpenses = expenses;
     if (expenses.length > 0 && rank) {
       realExpenses.sort((a, b) => (
-        a.exchangeRates[a.currency].ask * a.value - b.exchangeRates[b.currency].ask * b.value
+        a.exchangeRates[a.currency].ask * a.value
+        - b.exchangeRates[b.currency].ask * b.value
       ));
     }
     if (editor) realExpenses = expenses.filter((expense) => expense.id !== idToEdit);
     return (
       <div>
-        <p className="table-title">Exchange's Table</p>
+        <p className="table-title">Exchanges Table</p>
         <table className="table">
           <thead className="table-header">
             <tr>
@@ -60,7 +61,14 @@ class Table extends Component {
                   <tr key={ id }>
                     <td>{ index + 1 }</td>
                     <td>{ description }</td>
-                    <td>{ tag === 'Food' ? <BiRestaurant /> : tag === 'Health' ? <RiHealthBookFill /> : tag === 'Transport' ? <FaCarAlt /> : tag === 'Work' ? <MdWork /> : <FaUmbrellaBeach /> }</td>
+                    <td>
+                      {
+                        tag === 'Food' ? <BiRestaurant /> : tag === 'Health' ? <RiHealthBookFill />
+                          : tag === 'Transport' ? <FaCarAlt />
+                            : tag === 'Work' ? <MdWork />
+                              : <FaUmbrellaBeach />
+                      }
+                    </td>
                     <td>{ method }</td>
                     <td>{ parseFloat(value).toFixed(2) }</td>
                     <td>{ exchangeRates[currency].name.split('/')[0] }</td>
@@ -93,7 +101,7 @@ class Table extends Component {
         <button
           type="button"
           className="sort-btn"
-          onClick={ () => { this.setState({ rank: true }) } }
+          onClick={ () => { this.setState({ rank: true }); } }
         >
           Rank by value (BRL)
         </button>

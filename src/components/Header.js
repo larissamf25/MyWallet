@@ -11,7 +11,12 @@ class Header extends Component {
       <div className="header">
         <FaUserAlt className="icon" />
         <p className="email" data-testid="email-field">{ user.email }</p>
-        <p className="title"><span style={{ color: "#1BB81B" }}>T</span>rybe<span style={{ color: "#1BB81B" }}>W</span>allet</p>
+        <p className="title">
+          <span style={ { color: '#1BB81B' } }>T</span>
+          rybe
+          <span style={ { color: '#1BB81B' } }>W</span>
+          allet
+        </p>
         <div className="total-container">
           <p>R$</p>
           <p data-testid="total-field">
