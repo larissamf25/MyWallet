@@ -1,5 +1,5 @@
 {
-  "name": "mywallet",
+  "name": "MyWallet",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -80,5 +80,5 @@
       "/src/tests/"
     ]
   },
-  "homepage": "https://larissamf25.github.io/mywallet/"
+  "homepage": "https://larissamf25.github.io/MyWallet/"
 }
