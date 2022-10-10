@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="login-page">
       <Switch>
-        <Route path="/MyWallet" exact><Login /></Route>
-        <Route path="/MyWallet/carteira"><Wallet /></Route>
+        <Route path="/" exact><Login /></Route>
+        <Route path="/carteira"><Wallet /></Route>
       </Switch>
       <footer className="footer">by Larissa Menezes, 2022</footer>
     </div>

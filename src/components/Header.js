@@ -12,8 +12,8 @@ class Header extends Component {
         <FaUserAlt className="icon" />
         <p className="email" data-testid="email-field">{ user.email }</p>
         <p className="title">
-          <span style={ { color: '#1BB81B' } }>T</span>
-          rybe
+          <span style={ { color: '#1BB81B' } }>M</span>
+          y
           <span style={ { color: '#1BB81B' } }>W</span>
           allet
         </p>
