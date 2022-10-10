@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/mywallet/static/css/main.33c5ebb2.chunk.css",
-    "main.js": "/mywallet/static/js/main.69827422.chunk.js",
-    "main.js.map": "/mywallet/static/js/main.69827422.chunk.js.map",
-    "runtime-main.js": "/mywallet/static/js/runtime-main.000761a4.js",
-    "runtime-main.js.map": "/mywallet/static/js/runtime-main.000761a4.js.map",
-    "static/js/2.e95a3d61.chunk.js": "/mywallet/static/js/2.e95a3d61.chunk.js",
-    "static/js/2.e95a3d61.chunk.js.map": "/mywallet/static/js/2.e95a3d61.chunk.js.map",
-    "index.html": "/mywallet/index.html",
-    "static/css/main.33c5ebb2.chunk.css.map": "/mywallet/static/css/main.33c5ebb2.chunk.css.map",
-    "static/js/2.e95a3d61.chunk.js.LICENSE.txt": "/mywallet/static/js/2.e95a3d61.chunk.js.LICENSE.txt"
+    "main.css": "/MyWallet/static/css/main.33c5ebb2.chunk.css",
+    "main.js": "/MyWallet/static/js/main.829b762c.chunk.js",
+    "main.js.map": "/MyWallet/static/js/main.829b762c.chunk.js.map",
+    "runtime-main.js": "/MyWallet/static/js/runtime-main.e348c7cc.js",
+    "runtime-main.js.map": "/MyWallet/static/js/runtime-main.e348c7cc.js.map",
+    "static/js/2.b16c26ba.chunk.js": "/MyWallet/static/js/2.b16c26ba.chunk.js",
+    "static/js/2.b16c26ba.chunk.js.map": "/MyWallet/static/js/2.b16c26ba.chunk.js.map",
+    "index.html": "/MyWallet/index.html",
+    "static/css/main.33c5ebb2.chunk.css.map": "/MyWallet/static/css/main.33c5ebb2.chunk.css.map",
+    "static/js/2.b16c26ba.chunk.js.LICENSE.txt": "/MyWallet/static/js/2.b16c26ba.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.000761a4.js",
-    "static/js/2.e95a3d61.chunk.js",
+    "static/js/runtime-main.e348c7cc.js",
+    "static/js/2.b16c26ba.chunk.js",
     "static/css/main.33c5ebb2.chunk.css",
-    "static/js/main.69827422.chunk.js"
+    "static/js/main.829b762c.chunk.js"
   ]
 }
