@@ -21,4 +21,4 @@ https://user-images.githubusercontent.com/101740306/188286010-d1110689-c79b-46e9
   - CSS;
 
 ## How to run the project: 👀
-  Git clone the repository, enter the folder, wun npm install and it's ready to navigate!! Enjoy the project 💚
+  Git clone the repository, enter the folder, run npm install and it's ready to navigate!! Enjoy the project 💚
